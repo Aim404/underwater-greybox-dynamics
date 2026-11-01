@@ -59,6 +59,11 @@ commands (8), environment (depth 1, altitude 1, six wall distances, contact magn
 No dataset needed. The simulator loads a checkpoint and rolls out a trajectory from an initial state
 under a commanded control pattern:
 
+![demo rollout](figures/demo_circle.png)
+
+*A 100-step circle pattern: 3D trajectory against the tank boundary, linear velocity, angular rate.
+The flat start and the smooth decay are the integrator settling, not noise.*
+
 ```bash
 pip install -r requirements.txt
 python src/dynamics_simulator_v2.py --ckpt weights/ckpt_v2_best.pt \
